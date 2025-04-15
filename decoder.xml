@@ -1,0 +1,33 @@
+<decoder name="sophos-fw-decoder">
+    <prematch>^\S+device_name="\w+"\stimestamp="\d+-\d\d-\d\d\w\d\d:\d\d:\d\d-\d+"</prematch>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>device_name="(\w+)"\stimestamp="(\d+-\d\d-\d\d\w\d\d:\d\d:\d\d-\d+)"</regex>
+    <order>device_name,time_fw</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>device_model="(\w+)"</regex>
+    <order>device_model</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>device_serial_id="(\w+)"</regex>
+    <order>device_serial_id</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>log_type="(\w+)"</regex>
+    <order>log_type</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>log_subtype="(\w+)"</regex>
+    <order>log_subtype</order>
+</decoder>
