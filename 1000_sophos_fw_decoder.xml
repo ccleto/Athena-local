@@ -28,6 +28,42 @@
 
 <decoder name="sophos-fw-fields">
     <parent>sophos-fw-decoder</parent>
+    <regex>log_component="(\w+)"|log_component="(\.+)"</regex>
+    <order>log_component</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
     <regex>log_subtype="(\w+)"</regex>
     <order>log_subtype</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>status="(\w+)"</regex>
+    <order>status</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>severity="(\w+)"</regex>
+    <order>severity</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>user_name="(\w+)"</regex>
+    <order>user_name</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>src_ip="(\d+.\d+.\d+.\d+)"</regex>
+    <order>source_IP</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>message="(\.+)"</regex>
+    <order>message</order>
 </decoder>

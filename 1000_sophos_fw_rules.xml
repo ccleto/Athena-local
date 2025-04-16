@@ -1,0 +1,11 @@
+<group name="sophos-fw-rules">
+    <rule id="100013" level="0">
+        <decoded_as>sophos-fw-decoder</decoded_as>
+        <description>Sophos Firewall Events</description>
+    </rule>
+    <rule id="100014" level="7">
+        <if_sid>100013</if_sid>
+        <field name="message">logged in successfully to Web Admin Console</field>
+        <description>$(user_name) logged in successfully to Web Admin Console</description>
+    </rule>
+</group>
