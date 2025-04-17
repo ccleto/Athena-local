@@ -1,5 +1,5 @@
 <decoder name="sophos-fw-decoder">
-    <prematch>^\S+device_name="\w+"\stimestamp="\d+-\d\d-\d\d\w\d\d:\d\d:\d\d-\d+"</prematch>
+    <prematch>^device_name="\w+"\stimestamp="\d+-\d\d-\d\d\w\d\d:\d\d:\d\d-\d+"</prematch>
 </decoder>
 
 <decoder name="sophos-fw-fields">
