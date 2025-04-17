@@ -8,4 +8,9 @@
         <field name="message">logged in successfully to Web Admin Console</field>
         <description>$(user_name) logged in successfully to Web Admin Console</description>
     </rule>
+    <rule id="100015" level="8">
+        <if_sid>100013</if_sid>
+        <field name="message">couldn't sign in to web admin console</field>
+        <description>$(user_name) couldn't sign in to web admin console</description>
+    </rule>
 </group>
