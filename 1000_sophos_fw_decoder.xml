@@ -52,7 +52,7 @@
 
 <decoder name="sophos-fw-fields">
     <parent>sophos-fw-decoder</parent>
-    <regex>user_name="(\w+)"</regex>
+    <regex>user_name="(\.+)"</regex>
     <order>user_name</order>
 </decoder>
 
@@ -126,16 +126,118 @@
     <parent>sophos-fw-decoder</parent>
     <regex>url="(\.+)"</regex>
     <order>url</order>
-</decoder>dst_ip="34.102.128.190"
+</decoder>
 
 <decoder name="sophos-fw-fields">
     <parent>sophos-fw-decoder</parent>
     <regex>dst_ip="(\d+.\d+.\d+.\d+)"</regex>
     <order>dst_ip</order>
-</decoder>dUSA"
+</decoder>
 
 <decoder name="sophos-fw-fields">
     <parent>sophos-fw-decoder</parent>
-    <regex>dst_country="(\d+.\d+.\d+.\d+)"</regex>
+    <regex>dst_country="(\w\w\w)"</regex>
     <order>dst_country</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>src_country="(\w\w\w)"</regex>
+    <order>src_country</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>dst_mac="(\w+:\w+:\w+:\w+:\w+:\w+)"</regex>
+    <order>dst_mac</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>src_mac="(\w+:\w+:\w+:\w+:\w+:\w+)"</regex>
+    <order>src_mac</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>protocol="(\w\w\w)"</regex>
+    <order>protocol</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>src_port=(\d+)</regex>
+    <order>src_port</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>dst_port=(\d+)</regex>
+    <order>dst_port</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>app_name="(\.+)"</regex>
+    <order>app_name</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>app_risk=(\d+)</regex>
+    <order>app_risk</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>app_technology="(\.+)"</regex>
+    <order>app_technology</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>gw_id_request=(\d+)</regex>
+    <order>gw_id_request</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>gw_name_request="(\.+)"</regex>
+    <order>gw_name_request</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>gw_id_reply=(\d+)</regex>
+    <order>gw_id_reply</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>gw_name_reply="(\.+)"</regex>
+    <order>gw_name_reply</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>in_interface="(\.+)"</regex>
+    <order>in_interface</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>hb_status="(\.+)"</regex>
+    <order>hb_status</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>ips_policy_id=(\d+)</regex>
+    <order>ips_policy_id</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>app_filter_policy_id=(\d+)</regex>
+    <order>app_filter_policy_id</order>
 </decoder>
