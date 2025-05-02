@@ -59,11 +59,83 @@
 <decoder name="sophos-fw-fields">
     <parent>sophos-fw-decoder</parent>
     <regex>src_ip="(\d+.\d+.\d+.\d+)"</regex>
-    <order>source_IP</order>
+    <order>source_ip</order>
 </decoder>
 
 <decoder name="sophos-fw-fields">
     <parent>sophos-fw-decoder</parent>
     <regex>message="(\.+)"</regex>
     <order>message</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>fw_rule_id="(\d+)"</regex>
+    <order>fw_rule_id</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>fw_rule_name="(\.+)"</regex>
+    <order>fw_rule_name</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>fw_rule_section="(\.+)"</regex>
+    <order>fw_rule_section</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>nat_rule_id="(\d+)"</regex>
+    <order>nat_rule_id</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>nat_rule_name="(\.+)"</regex>
+    <order>nat_rule_name</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>fw_rule_type="(\w+)"</regex>
+    <order>fw_rule_type</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>user_group="(\.+)"</regex>
+    <order>user_group</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>http_category="(\.+)"</regex>
+    <order>http_category</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>http_category_type="(\.+)"</regex>
+    <order>http_category_type</order>
+</decoder>
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>url="(\.+)"</regex>
+    <order>url</order>
+</decoder>dst_ip="34.102.128.190"
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>dst_ip="(\d+.\d+.\d+.\d+)"</regex>
+    <order>dst_ip</order>
+</decoder>dUSA"
+
+<decoder name="sophos-fw-fields">
+    <parent>sophos-fw-decoder</parent>
+    <regex>dst_country="(\d+.\d+.\d+.\d+)"</regex>
+    <order>dst_country</order>
 </decoder>
