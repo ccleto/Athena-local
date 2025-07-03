@@ -1,0 +1,10 @@
+<decoder name="dockerR">
+  <program_name>docker</program_name>
+</decoder>
+
+<decoder name="docker-ressources">
+  <parent>dockerR</parent>
+  <prematch>ossec: output: 'docker stats --format "{{.Container}} {{.Name}} {{.CPUPerc}} {{.MemUsage}}" --no-stream':</prematch>
+  <regex offset="after_prematch">(\S+) (\S+) (\S+) (\S+) / (\S+)</regex>
+  <order>ContainerID, ContainerName, ContainerCPU, ContainerMemoryUsage, ContainerMemroyAvailable</order>
+</decoder>
