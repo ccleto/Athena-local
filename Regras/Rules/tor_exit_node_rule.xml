@@ -1,0 +1,19 @@
+<group name="custom,tor,">
+
+  <!-- 
+    Regra para detectar conexões de saída para IPs da rede Tor (Exit Nodes).
+    Certifique-se de que a lista CDB 'tor_exit_nodes.cdb.txt' está em /var/ossec/etc/lists/
+    e definida no ossec.conf.
+    A regra assume que o campo do IP de destino é 'dstip'. Ajuste se necessário.
+  -->
+  <rule id="100074" level="12">
+    <if_sid /> <!-- Pode ser ajustado para um SID específico se necessário, ex: firewall -->
+    <list field="dstip" lookup="match_key">etc/lists/tor_exit_nodes.cdb.txt</list>
+    <description>Alerta: Conexão de saída detectada para um nó de saída da rede Tor (IP: $(dstip)).</description>
+    <group>network,tor_connection,gdpr_IV_35.7.d,</group>
+    <mitre>
+      <id>T1090.002</id> <!-- MITRE ATT&CK: Proxy: External Proxy -->
+    </mitre>
+  </rule>
+
+</group>

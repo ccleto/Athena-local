@@ -1,0 +1,6 @@
+<group name="docker">
+  <rule id="100005" level="5">
+    <decoded_as>dockerR</decoded_as>
+    <description>alert docker ressources</description>
+  </rule>
+</group>
